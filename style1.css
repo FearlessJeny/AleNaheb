@@ -1,0 +1,282 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    direction: rtl;
+    background: #f8f8f8;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.book {
+    /* outline: 6px solid gray; */
+    position: relative;
+    width: 850px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: #dbd7d7;
+    transform: preserve-3d;
+  perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.book:hover .pered {
+    transition: all 0.5s;
+    transform: rotateY(85deg);
+}
+
+.pered {
+    outline: purple;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background: linear-gradient(to top, rgb(13, 87, 3), rgb(4, 184, 4));
+  background-size: cover;
+  transform-origin: right;
+  border-radius: 10px;
+  transition: all 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  gap: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.logo {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.bg-logo {
+    width: 10rem;
+    border-radius: 60%;
+     box-shadow: 0px 0px 10px rgb(247, 222, 2);
+  animation: blink 1.2s infinite ease-in-out;
+}
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 5px yellow;
+  }
+  50% {
+    box-shadow: 0 0 20px yellow;
+  }
+  100% {
+    box-shadow: 0 0 5px yellow;
+  }
+}
+
+.pered > h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1rem;
+  color: #fff;
+}
+.pered > h2 > span {
+  display: flex;
+  /* outline: 1px solid red; */
+}
+
+.rainbow-text {
+  font-size: 1.3rem;
+  background: linear-gradient(270deg, blue, green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove 9s linear infinite;
+}
+.rainbow-text1 {
+  display: inline-block;
+  font-size: 1.3rem;
+  background: linear-gradient(-270deg, blue, green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove1 5s linear infinite;
+}
+@keyframes rainbowMove1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes rainbowMove {
+  100% {
+    background-position: 0% 50%;
+  }
+  0% {
+    background-position: 100% 50%;
+  }
+}
+.right {
+	margin-right: -130px;
+}
+.center {
+  margin-right: -120px;
+}
+
+.left {
+	margin-right: -90px;
+}
+
+.content {
+/* outline: 1px solid red; */
+width: 100vw;
+  max-width: 750px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.zad {
+    /* outline: 1px solid green; */
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.75rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+    /* background: lightblue; */
+}
+
+.zad p {
+    max-width: 95%;
+    font-size: calc(1.2rem + 0.5rem);
+    padding: 0.5rem 0.5rem;
+    line-height: 1.3;
+    word-break: break-world;
+    margin: 0;
+}
+
+
+.socials {
+    /* outline: 1px solid yellowgreen; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.socials a i {
+    font-size: 2rem;
+     animation: jumpUp 1.5s ease-in-out infinite;
+  }
+
+  .fa-whatsapp {
+	color: green;
+}
+.fa-facebook-f {
+	color: blue;
+}
+.fa-instagram {
+	color: violet;
+}
+.fa-waze {
+	color: black;
+}
+
+.socials a:nth-child(1) i {
+  animation-delay: 0.3s;
+  color: green;
+}
+.socials a:nth-child(2) i {
+  animation-delay: 0s;
+  color: blue;
+}
+.socials a:nth-child(3) i {
+  animation-delay: 0.3s;
+  color: violet;
+}
+.socials a:nth-child(4) i {
+  animation-delay: 0s;
+  color: black;
+}
+@keyframes jumpUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+@media (max-width: 1200px) {
+    .zad p {
+    font-size: calc(1rem, 2vh + 0.5rem);
+    font-weight: 600;
+  }
+  .book {
+    width: 95%;
+    /* height: auto; */
+  }
+}
+@media (max-width: 768px) {
+.zad p {
+    width: 100%;
+    font-size: calc(1.1rem + 0.29rem);
+    font-weight: 600;
+  }
+  .book {
+    width: 95%;
+    /* height: auto; */
+  }
+}
+@media (max-width: 480px) {
+.zad p {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .book {
+    width: 95%;
+    /* height: auto; */
+  }
+}
+@media (max-width: 400px) {
+.zad p {
+    /* width: 100%; */
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .content {
+    height: 90%;
+  }
+  .book {
+    width: 95%;
+    height: 90%;
+  }
+  .logo {
+    width: 10%;
+  }
+  .bg-logo {
+    width: 55%;
+  }
+}
