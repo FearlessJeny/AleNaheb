@@ -146,7 +146,7 @@ body {
 
 .rainbow-text {
   font-size: 1.3rem;
-  background: linear-gradient(270deg, blue, green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow );
+  background: linear-gradient(270deg, blue, orange, blue, orange, blue, orange);
   background-size: 400% 400%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -178,14 +178,14 @@ body {
   }
 }
 .right {
-	margin-right: -120px;
+	margin-right: -110px;
 }
 .center {
-  margin-right: -110px;
+  margin-right: -90px;
 }
 
 .left {
-	margin-right: -80px;
+	margin-right: -70px;
 }
 
 .content {
