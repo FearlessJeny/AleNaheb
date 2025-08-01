@@ -384,8 +384,8 @@ body {
 @media (max-width: 480px) {
 	.zad p {
 		width: 100%;
-		height: auto;
-		font-size: clamp(10px, 2.5vh, 35px);
+		height: 100%;
+		font-size: clamp(8px, 2.3vh, 30px);
 		font-weight: 550;
 	}
 	.book {
