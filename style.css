@@ -1,345 +1,425 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-    direction: rtl;
-    background: #f8f8f8;
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	direction: rtl;
+	background: #f8f8f8;
 }
 
 body {
-    display: grid;
-    place-items: center;
+	display: grid;
+	place-items: center;
 }
 
 .book {
-    /* outline: 6px solid gray; */
-    position: relative;
-    width: 850px;
-    height: 700px;
-    border-radius: 10px;
-    background-color: #dbd7d7;
-    transform: preserve-3d;
-  perspective: 2000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    text-align: center;
+	position: relative;
+	width: 850px;
+	height: 700px;
+	border-radius: 10px;
+	background-color: #dbd7d7;
+	transform: preserve-3d;
+	perspective: 2000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	text-align: center;
 }
 
 .book:hover .pered {
-    transition: all 0.5s;
-    transform: rotateY(85deg);
+	transition: all 0.5s;
+	transform: rotateY(85deg);
 }
 
 .pered {
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-/*   background: linear-gradient(to top, rgb(13, 87, 3), rgb(4, 184, 4)); */
-	background: linear-gradient(to top, rgb(25, 204, 1), rgb(12, 175, 2), rgb(15, 136, 1));
-  background-size: cover;
-	 border: 2px solid transparent;
-	border-image: linear-gradient(270deg, 
-    red, orange, yellow, green, cyan, blue, violet, );
-  border-image-slice: 1;
-  animation: rainbow-border 5s linear infinite;
-  transform-origin: right;
-  border-radius: 10px;
-  transition: all 0.5s;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		to top,
+		rgb(25, 204, 1),
+		rgb(12, 175, 2),
+		rgb(15, 136, 1)
+	);
+	background-size: cover;
+	border: 2px solid transparent;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2.5rem;
-  gap: 2rem;
-  cursor: pointer;
-  z-index: 10;
+	border-image: linear-gradient(
+		270deg,
+		red,
+		orange,
+		yellow,
+		green,
+		cyan,
+		blue,
+		violet
+	);
+	border-image-slice: 1;
+	animation: rainbow-border 5s linear infinite;
+	border-radius: 10px;
+	transform-origin: right;
+	transition: all 0.5s;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2.5rem;
+	gap: 2rem;
+	cursor: pointer;
+	z-index: 10;
 }
 
 .pered::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  background: linear-gradient(
-    270deg,
-    red,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet,
-    red
-  );
-  background-size: 400% 400%;
-  animation: rainbow-border 5s linear infinite;
-  border-radius: 12px;
-  z-index: -1;
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+	background: linear-gradient(
+		270deg,
+		red,
+		orange,
+		yellow,
+		green,
+		cyan,
+		blue,
+		violet,
+		red,
+		red,
+		orange,
+		yellow,
+		green,
+		cyan,
+		blue,
+		violet,
+		red,
+		red,
+		orange,
+		yellow,
+		green,
+		cyan,
+		blue,
+		violet,
+		red
+	);
+	background-size: 400% 400%;
+	animation: rainbow-border 5s linear infinite;
+	border-radius: 12px ;
+	z-index: -1;
 
-  /* Маска делает рамку пустой внутри */
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  padding: 4px;
-  box-sizing: border-box;
+	/* Маска делает рамку пустой внутри */
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	-webkit-mask-composite: destination-out;
+	padding: 4px;
+	box-sizing: border-box;
 }
 
 @keyframes rainbow-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
 }
 
 .logo {
-    width: 4rem;
-    border-radius: 50%;
+	width: 4rem;
+	border-radius: 50%;
 }
 
 .bg-logo {
-    width: 10rem;
-    border-radius: 60%;
-     box-shadow: 0px 0px 10px rgb(247, 222, 2);
-  animation: blink 1.2s infinite ease-in-out;
+	/* outline: 1px solid red; */
+	/* position: absolute; */
+	width: 30%;
+	object-fit: cover;
+	border-radius: 60%;
+	box-shadow: 0px 0px 10px rgb(247, 222, 2);
+	animation: blink 1.2s infinite ease-in-out;
 }
 @keyframes blink {
-  0% {
-    box-shadow: 0 0 5px yellow;
-  }
-  50% {
-    box-shadow: 0 0 20px yellow;
-  }
-  100% {
-    box-shadow: 0 0 5px yellow;
-  }
+	0% {
+		box-shadow: 0 0 5px rgb(238, 255, 0);
+	}
+	50% {
+		box-shadow: 0 0 20px rgb(238, 255, 0);
+	}
+	100% {
+		box-shadow: 0 0 5px rgb(238, 255, 0);
+	}
 }
 
 .pered > h1 {
-  text-transform: uppercase;
-  font-size: 25px;
-  letter-spacing: 1rem;
-  color: #fff;
-}
-.pered > h2 > span {
-  display: flex;
-  /* outline: 1px solid red; */
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 1rem;
+	color: #fff;
 }
 
-.rainbow-text {
-  font-size: 1.3rem;
-  background: linear-gradient(270deg, blue, orange, blue, orange, blue, orange);
-  background-size: 400% 400%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowMove 9s linear infinite;
+.pered > h2 > span {
+	display: flex;
+	color: #9C2337;
 }
-.rainbow-text1 {
-  display: inline-block;
-  font-size: 1.3rem;
-  background: linear-gradient(-270deg, blue, green, orange, yellow, blue, green, orange, yellow, blue, green, orange, yellow );
-  background-size: 400% 400%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowMove1 5s linear infinite;
-}
+
+/* .rainbow-text {
+	font-size: 1.3rem;
+	background: linear-gradient(270deg, blue, orange, blue, orange, blue, orange);
+	background-size: 400% 400%;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbowMove 9s linear infinite;
+} */
+/* .rainbow-text1 {
+	display: inline-block;
+	font-size: 1.3rem;
+	background: linear-gradient(
+		-270deg,
+		blue,
+		green,
+		orange,
+		yellow,
+		blue,
+		green,
+		orange,
+		yellow,
+		blue,
+		green,
+		orange,
+		yellow
+	);
+	background-size: 400% 400%;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbowMove1 5s linear infinite;
+} */
 @keyframes rainbowMove1 {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
 }
 @keyframes rainbowMove {
-  100% {
-    background-position: 0% 50%;
-  }
-  0% {
-    background-position: 100% 50%;
-  }
+	100% {
+		background-position: 0% 50%;
+	}
+	0% {
+		background-position: 100% 50%;
+	}
 }
 .right {
-	margin-right: -110px;
+	margin-right: -80px;
 }
 .center {
-  margin-right: -90px;
+	margin-right: -50px;
 }
 
 .left {
-	margin-right: -70px;
+	margin-right: -40px;
 }
 
 .content {
-/* outline: 1px solid red; */
-width: 100vw;
-  max-width: 750px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 15px 2px;
-  box-sizing: border-box;
-  overflow: hidden;
+	/* outline: 1px solid red; */
+	width: 100vw;
+	max-width: 750px;
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 15px 2px;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .zad {
-    /* outline: 1px solid green; */
-    height: 90%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0.75rem;
-    text-align: justify;
-    margin-bottom: 2rem;
-    /* background: lightblue; */
+	/* outline: 1px solid green; */
+	height: 90%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0.75rem;
+	text-align: justify;
+	margin-bottom: 2rem;
+	/* background: lightblue; */
 }
 
 .zad p {
-    max-width: 95%;
-    font-size: calc(1.2rem + 0.5rem);
-    padding: 0.5rem 0.5rem;
-    line-height: 1.3;
-    word-break: break-world;
-    margin: 0;
+	max-width: 95%;
+	font-size: calc(1.2rem + 0.5rem);
+	padding: 0.5rem 0.5rem;
+	line-height: 1.3;
+	word-break: break-world;
+	margin: 0;
 }
 
-
 .socials {
-    /* outline: 1px solid yellowgreen; */
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	/* outline: 1px solid yellowgreen; */
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .socials a i {
-    font-size: 2rem;
-     animation: jumpUp 1.5s ease-in-out infinite;
-  }
+	font-size: 2rem;
+	animation: jumpUp 1.5s ease-in-out infinite;
+}
 
-  .fa-whatsapp {
+.fa-whatsapp {
 	color: green;
 }
+
 .fa-facebook-f {
 	color: blue;
 }
+
 .fa-instagram {
-	background: linear-gradient(45deg,  rgb(250, 1, 146));
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+	color: rgb(250, 1, 146);
+	
+}
+
+.rainbow-icon {
+	color: rgb(26, 64, 95);
 }
 .fa-waze {
 	color: black;
 }
-.rainbow-icon {
-    background: linear-gradient(45deg,  rgb(26, 64, 95));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
 
 .socials a:nth-child(1) i {
-  animation-delay: 0.3s;
-  color: green;
+	animation-delay: 0.3s;
+	color: green;
 }
 .socials a:nth-child(2) i {
-  animation-delay: 0s;
-  color: blue;
+	animation-delay: 0s;
+	color: blue;
 }
 .socials a:nth-child(3) i {
-  animation-delay: 0.3s;
-  color: violet;
+	animation-delay: 0.3s;
+	color: rgb(250, 1, 146);
 }
 .socials a:nth-child(4) i {
-  animation-delay: 0s;
-  color: violet;
+	animation-delay: 0s;
+	color: rgb(26, 64, 95);
 }
 .socials a:nth-child(5) i {
-  animation-delay: 0.3s;
-  color: black;
-}
-@keyframes jumpUp {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
+	animation-delay: 0.3s;
+	color: black;
 }
 
+@keyframes jumpUp {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
 
 @media (max-width: 1200px) {
-    .zad p {
-    font-size: calc(1rem, 2vh + 0.5rem);
-    font-weight: 600;
-  }
-  .book {
-    width: 95%;
-    /* height: auto; */
-  }
+	.zad p {
+		font-size: calc(1rem, 2vh + 0.5rem);
+		font-weight: 600;
+	}
+	.book {
+		width: 95%;
+		/* height: auto; */
+	}
 }
 @media (max-width: 768px) {
-.zad p {
-    width: 100%;
-    font-size: calc(1.1rem + 0.29rem);
-    font-weight: 600;
-  }
-  .book {
-    width: 95%;
-    /* height: auto; */
-  }
+	.content {
+		position: relative;
+		width: 100vw;
+		height: 100%;
+		padding: 25px 0px;
+	}
+	.zad {
+		/* outline: 1px solid rgb(0, 17, 255); */
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0px 5px;
+		box-sizing: border-box;
+		overflow: hidden;
+		top: 0;
+		gap: 1rem;
+		/* margin: 0rem auto; */
+
+	}
+	
+	.zad p {
+		/* width: 100%; */
+		top: 0;
+		margin: 0;
+		text-align: justify;
+		font-size: clamp(10px, 2.5vh, 122.5px);
+		line-height: 1.2;
+		word-wrap: break-word;
+	}
+	.book {
+		width: 95%;
+		/* height: auto; */
+	}
 }
+
 @media (max-width: 480px) {
-.zad p {
-    width: 100%;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  .book {
-    width: 95%;
-    height: auto;
-  }
+	.zad p {
+		width: 100%;
+		height: auto;
+		font-size: clamp(10px, 2.5vh, 35px);
+		font-weight: 550;
+	}
+	.book {
+		width: 95%;
+		/* height: auto; */
+	}
+	.logo {
+		width: 20%;
+	}
+	.bg-logo {
+		width: 65%;
+	}
+	.pered > h2 {
+		margin-top: 3rem;
+	}
 }
 @media (max-width: 400px) {
-.zad p {
-    /* width: 100%; */
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  .content {
-    height: 90%;
-  }
-  .book {
-    width: 95%;
-    height: 90%;
-  }
-  .logo {
-    width: 10%;
-  }
-  .bg-logo {
-    width: 55%;
-  }
+	.zad p {
+		width: 100%;
+		height: 100%;
+		font-size: clamp(1.1rem, 2.5vh,  1.5rem);
+		font-weight: 500;
+	}
+	.content {
+		height: 90%;
+	}
+	.book {
+		width: 95%;
+		height: 90%;
+	}
+	.logo {
+		width: 10%;
+	}
+	.bg-logo {
+		width: 55%;
+	}
 }
