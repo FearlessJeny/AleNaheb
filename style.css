@@ -382,11 +382,30 @@ body {
 }
 
 @media (max-width: 480px) {
+	.container {
+		width: 100vw;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.zad {
+		outline: 1px solid #9C2337;
+		display: inline-flex;
+		width: 100%;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.zad p {
 		width: 100%;
 		height: 100%;
-		font-size: clamp(8px, 2.3vh, 18px);
-		font-weight: 550;
+		font-size: clamp(8px, 2vh, 80px);
+		font-weight: 450;
+		word-wrap: break-word;
+		/* line-height: 1.2; */
 	}
 	.book {
 		width: 95%;
@@ -401,7 +420,6 @@ body {
 	.pered > h2 {
 		margin-top: 3rem;
 	}
-}
 @media (max-width: 400px) {
 	.zad p {
 		width: 100%;
