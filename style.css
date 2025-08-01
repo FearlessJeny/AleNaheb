@@ -385,7 +385,7 @@ body {
 	.zad p {
 		width: 100%;
 		height: 100%;
-		font-size: clamp(8px, 2.3vh, 30px);
+		font-size: clamp(8px, 2.3vh, 25px);
 		font-weight: 550;
 	}
 	.book {
