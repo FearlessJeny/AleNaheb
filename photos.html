@@ -14,7 +14,7 @@
 
 <body>
   
-    <swiper-container class="mySwiper" space-between="30" pagination="true" pagination-clickable="true">
+<!--     <swiper-container class="mySwiper" space-between="30" pagination="true" pagination-clickable="true">
 
         
 
@@ -84,9 +84,94 @@
             <span>&times;</span>
             <img src="img/1.webp" alt="">
         </div>
-    </swiper-container>
+    </swiper-container> -->
+
+     <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            <picture >
+                <source srcset="img/1.webp" type="images/webp">
+                <img src="img/1.webp" alt="">
+            </picture>
+        </div>
+
+            <div class="swiper-slide">
+            <picture>
+                <source srcset="img/2.webp" type="images/webp">
+                <img  src="img/2.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+            <picture>
+                <source srcset="img/3.webp" type="images/webp">
+                <img src="img/3.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+            <picture>
+                <source srcset="img/4.webp" type="images/webp">
+                <img src="img/4.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+            <picture>
+                <source srcset="img/5.webp" type="images/webp">
+                <img src="img/5.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+            <picture>
+                <source srcset="img/6.webp" type="images/webp">
+                <img src="img/6.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+
+            <picture>
+                <source srcset="img/7.webp" type="images/webp">
+                <img src="img/7.webp" alt="">
+            </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source srcset="img/8.webp" type="images/webp">
+                    <img src="img/8.webp" alt="">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source srcset="img/9.webp" type="images/webp">
+                    <img src="img/9.webp" alt="">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source srcset="img/10.webp" type="images/webp">
+                    <img src="img/10.webp" alt="">
+                </picture>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cube",
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
+
 
 </html>
