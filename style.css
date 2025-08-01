@@ -17,6 +17,7 @@ body {
 body {
 	display: grid;
 	place-items: center;
+	background-color: #212121;
 }
 
 .book {
@@ -24,7 +25,7 @@ body {
 	width: 850px;
 	height: 700px;
 	border-radius: 10px;
-	background-color: #dbd7d7;
+	background-color: #d3eeec;
 	transform: preserve-3d;
 	perspective: 2000px;
 	display: flex;
@@ -441,3 +442,4 @@ body {
 		width: 55%;
 	}
 }
+
