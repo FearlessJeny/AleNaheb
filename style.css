@@ -170,7 +170,7 @@ body {
 
 .pered > h2 > span {
 	display: flex;
-	color: blue;
+	color: red;
 }
 
 /* .rainbow-text {
