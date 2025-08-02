@@ -6,90 +6,35 @@
 
  html,
     body {
-      position: relative;
-      height: 100%;
-    }
-
-/*     body {
-        width: 100%;
-	height: 100vh;
-      background: #000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    } */
-
-/* body {
-	width: 100%;
-	height: 100vh;
-	background: #262626;
-} */
-
-/* swiper-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-	align-items: center;
-	justify-content: center;
-    }
-
-    swiper-slide {
-        width: 100%;
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    swiper-slide  img {
-      display: block;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-
-    } */
-
- body {
-      background: #107074;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+     
+       margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* чтобы не было прокрутки */
+  background: #107074;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
     }
 
     .swiper {
       width: 100%;
-      height: auto;
-      display: flex;
-      
-      position: absolute;
+      height: 100vh;
     }
+
+    .swiper-zoom-container {
+  transition: transform 0.3s ease-in-out;
+}
 
     .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      display: flex;
+  align-items: center;
+  justify-content: center;
     }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+  .swiper-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+  transition: transform 0.3s ease; /* для плавности зума вручную */
     }
